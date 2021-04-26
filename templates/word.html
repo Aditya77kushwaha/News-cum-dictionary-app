@@ -8,6 +8,16 @@
 </head>
 <body>
     <div class="container shadow round m-4 p-4">
+        <div class="row">
+            <div class="col-6">
+                <a href="//127.0.0.1:8000/news/" class="btn btn-sm btn-success" style="text-decoration: none; font-weight: 600">NEWS APP</a>
+            </div>
+            <div class="col-6">
+                <a href="//127.0.0.1:8000/dictionary/" class="btn btn-sm btn-success" style="text-decoration: none; font-weight: 600">Dictionary APP</a>
+            </div>
+        </div>
+        
+        <hr>
         <h2>{{word | title}}</h2>
         <p>{{ mean }}</p>
         <p><b>Antonyms :</b>{% for i in ant %}

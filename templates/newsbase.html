@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>News APP</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container " style="width: 100%;">
+        <div class="row m-4">
+            <div class="col-6">
+                <p style="font-weight: 600;">Supported country codes are </p>
+                <p><em>ae ar at au be bg br ca ch cn co cu cz de eg fr gb gr hk hu id ie il in it jp kr lt lv ma mx my
+                        ng nl no nz ph pl pt ro rs ru sa se sg si sk th tr tw ua us ve za</em></p>
+                <form action="news/" method="GET">
+                    <input type="text" name="country" placeholder="Enter Country Code" class="form-control">
+                    <input type="submit" value="SHOW" style="font-weight: 600;" class="btn btn-primary btn-sm ">
+                </form>
+            </div>
+            <div class="col-6">
+                <p style="font-weight: 600;">Supported categories are </p>
+                <p><em>general business entertainment sports</em></p>
+                <p><em>health science technology</em></p>
+                <form action="news/" method="GET" class="mt-4">
+                    <input type="text" name="category" placeholder="Enter Category" class="form-control">
+                    <input type="submit" value="SHOW" style="font-weight: 600;" class="btn btn-primary btn-sm ">
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="" async defer></script>
+</body>
+
+</html>
