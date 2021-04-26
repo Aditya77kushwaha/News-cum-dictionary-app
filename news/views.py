@@ -10,10 +10,10 @@ def index(request):
     country = request.GET.get('country')
     category = request.GET.get('category')
 
-    if category:
+    if category :
         url = f'https://newsapi.org/v2/top-headlines?category={category}&apiKey={API_KEY}'
 
-    elif country:
+    elif country :
         url = f'https://newsapi.org/v2/top-headlines?country={country}&apiKey={API_KEY}'
 
     response = requests.get(url)
