@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'dictionary',
     'news',
+    'search',
 ]
 
 MIDDLEWARE = [
