@@ -10,6 +10,69 @@
 
 <body>
 
+	<header>
+
+  <!-- Background image -->
+  <div
+    class="p-5 text-center bg-image"
+    style="
+      background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGb-ylILz3P1s94If7aXm5nIxuu2AnK0-2ew&usqp=CAU');
+      height: 400px;
+    "
+  >
+    <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+      <div class="d-flex justify-content-center align-items-center h-100">
+        <div class="text-white">
+          <h1 class="mb-3">Search</h1>
+          <h4 class="mb-3">Search for latest and most popular videos </h4>
+          <form method="POST">
+          	{% csrf_token %}
+          	<input type="text" name="search" class="form-control">
+          	<p>
+	          	<input class="btn btn-outline-light btn-lg" value="search" name="submit" type="submit" />
+	          	<input class="btn btn-outline-light btn-lg" value="news" name="submit" type="submit"/>
+          	</p>
+          </form>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Background image -->
+</header>
+
+	<div class="container round shadow " style="width: 75%">
+		<div class="row">
+			{% for video in videos %}
+				<div class="col-md-4">
+					<div class="card">
+					  <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+					    <img
+					      src="{{ video.thumbnail }}"
+					      class="img-fluid"
+					    />
+					    <a href="#!">
+					      <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+					    </a>
+					  </div>
+					  <div class="card-body">
+					    <h5 class="card-title">{{ video.title }}</h5>
+					    <div class="row">
+					    	<div class="col-md-6">
+					    		<a href="{{ video.url }}" class="btn btn-primary btn-sm">View</a>
+					    	</div>
+					    	<div class="col-md-6 mt-2">
+					    		{{ video.duration }} min
+					    	</div>
+					    </div>
+					  </div>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+	
+
 </body>
 
 </html>
