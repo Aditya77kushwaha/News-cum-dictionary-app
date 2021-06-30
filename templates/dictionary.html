@@ -1,27 +1,14 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Dictionary App</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Material Design Bootstrap -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
-</head>
-<body>
-    {% extends "base.html" %}
-    {% block content %}
-    <div class="container shadow round m-4 p-4">
-        <div class="row">
-            <div class="col-8">
-                <form action="mean" method="GET">
-                    <input type="text" name="word" class="form-control" placeholder="Enter Word">
-                    <input type="submit" class="btn btn-sm btn-success" value="MEAN">
-                </form>
-            </div>
-            <div class="col-4">
-                <a href="//127.0.0.1:8000/news/" class="btn btn-sm btn-success" style="text-decoration: none; font-weight: 600">NEWS APP</a>
-            </div>
+{% extends "base1.html" %}
+{% block dictionary %}
+<div class="container shadow round mt-4">
+    <div class="row">
+        <div class="col-8">
+            <form action="mean" class="m-3" method="GET">
+                <input type="text" name="word" class="form-control" placeholder="Enter Word">
+                <input type="submit" class="btn btn-sm btn-primary" value="Get meaning">
+            </form>
         </div>
+        
     </div>
-    {% endblock %}
-</body>
-</html>
+</div>
+{% endblock dictionary %}

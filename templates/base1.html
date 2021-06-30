@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Page</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--link for google fonts-->
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed&family=Nunito+Sans:wght@300&family=Playfair+Display&family=Red+Rose&family=Rowdies:wght@700&display=swap" rel="stylesheet"> 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+</head>
+<body class="bg-light" style="background-color:grey;">
+
+<div class="container">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">
+      <img src="https://www.bing.com/th?id=OIP.3XSKr56k-mFw9f5wBjB5GgHaHa&w=153&h=160&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2" alt="" width="30" height="24" class="d-inline-block align-text-top">
+      News-cum-Dictionary App
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="material-icons toggle-on-icon">toggle</span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="//127.0.0.1:8000/news/">News App</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="//127.0.0.1:8000/dictionary/">Dictionary App</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="//127.0.0.1:8000/search/">Search App</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+{% block news %}
+{% endblock news %}
+
+{% block dictionary %}
+{% endblock dictionary %}
+
+{% block search %}
+{% endblock search %}
+</body>
+</html>

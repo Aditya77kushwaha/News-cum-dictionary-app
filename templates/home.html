@@ -1,22 +1,38 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Home Page</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Material Design Bootstrap -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
-</head>
-<body>
-    <div class="row">
-        <div class="col-md-4">
-           <a href="//127.0.0.1:8000/news/" class="btn btn-sm btn-success" style="text-decoration: none;">NEWS APP</a>
-        </div>
-        <div class="col-md-4">
-            <a href="//127.0.0.1:8000/dictionary/" class="btn btn-sm btn-success" style="text-decoration: none;">DICTIONARY APP</a>
-        </div>
-        <div class="col-md-4">
-            <a href="//127.0.0.1:8000/search/" class="btn btn-sm btn-success" style="text-decoration: none;">SEARCH APP</a>
-        </div>
-    </div>
-</body>
-</html>
+{% extends 'base1.html' %}
+{% block news %}
+<div class="p-2">
+<div class="card m-2">
+  <div class="card-header">
+    News App
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Latest News</h5>
+    <p class="card-text">Find latest news on News App from around the world.</p>
+    <a href="//127.0.0.1:8000/news/" class="btn btn-primary btn-sm">Go to News App</a>
+  </div>
+</div>
+
+<div class="card m-2">
+  <div class="card-header">
+    Dictionary App
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Search Words</h5>
+    <p class="card-text">Search meanings of difficult words you encounter while reading latest news from around the world.</p>
+    <a href="//127.0.0.1:8000/dictionary/" class="btn btn-primary btn-sm">Go to Dictionary App</a>
+  </div>
+</div>
+
+<div class="card m-2">
+  <div class="card-header">
+    Search App
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Search Videos</h5>
+    <p class="card-text">Search latest news on Search App.</p>
+    <a href="//127.0.0.1:8000/search/" class="btn btn-primary btn-sm">Go to Search App</a>
+  </div>
+</div>
+</div>
+</div>
+{% endblock news %}
